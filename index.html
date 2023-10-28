@@ -24,12 +24,23 @@
         let fila;
         let celda;
         tabla = document.getElementById("cuadricula");
+        <!-- Fila para números -->
+        fila = tabla.insertRow(-1);
+        celda = fila.insertCell(-1);           
+          celda.innerHTML ="";
+        for(j=0 ; j<67 ;j++){
+             celda = fila.insertCell(-1);           
+              celda.innerHTML =j;
+          }
         for(i=0 ; i<32 ;i++){
           fila = tabla.insertRow(-1);
+          celda = fila.insertCell(-1);           
+          celda.innerHTML =i;
           for(j=0 ; j<67 ;j++){
              celda = fila.insertCell(-1);
               celda.addEventListener('click', function () { cambiarFondo(evento); });
           }
+          
         }
       }
       function  cambiarFondo(evento){
