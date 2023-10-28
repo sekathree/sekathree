@@ -32,11 +32,11 @@
           }
         }
       }
-      function  cambiarFondo(){
-        if(this.className == "Negro"){
-           this.className ="Blanco"
+      function  cambiarFondo(evento){
+        if(evento.target.className == "Negro"){
+           evento.target.className ="Blanco"
            }else{
-            this.className ="Negro"
+            evento.target.className ="Negro"
           }
       }
     </script>
