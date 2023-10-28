@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <script>
+      function cargaCuadricula(){
+        let tabla;
+        let fila;
+        let celda;
+        tabla = document.getElementById("cuadricula");
+        for(i=0 ; i<32 ;i++){
+          fila = tabla.insertRow(-1);
+          for(j=0 ; j<67 ;j++){
+             celda = fila.insertCell(-1);
+          }
+        }
+      }
+    </script>
+  </head>
+  <body onload="cargaCuadricula()">
+    <table id="cuadricula">
+      
+    </table>
+  </body>
+</html>
