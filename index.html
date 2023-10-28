@@ -5,7 +5,7 @@
       td {
   border: 1px solid;
         height:12px;
-        width:8px;
+        width:16px;
 }
         .Blanco{
           background-color:white;
@@ -28,15 +28,15 @@
         fila = tabla.insertRow(-1);
         celda = fila.insertCell(-1);           
           celda.innerHTML ="";
-        for(j=0 ; j<67 ;j++){
+        for(j=0 ; j<=67 ;j++){
              celda = fila.insertCell(-1);           
               celda.innerHTML =j;
           }
-        for(i=0 ; i<32 ;i++){
+        for(i=0 ; i<=32 ;i++){
           fila = tabla.insertRow(-1);
           celda = fila.insertCell(-1);           
           celda.innerHTML =i;
-          for(j=0 ; j<67 ;j++){
+          for(j=0 ; j<=67 ;j++){
              celda = fila.insertCell(-1);
               celda.addEventListener('click', function () { cambiarFondo(event); });
           }
