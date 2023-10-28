@@ -2,9 +2,21 @@
   <head>
     <style>
       
-      table, th, td {
+      td {
   border: 1px solid;
+        height:2px;
+        width:2px;
+
+        .Blanco{
+          background-color:white;
+        }
+        .Negro{
+          background-color:black;
+        }
+        
 }
+      
+      
     </style>
     <script>
       function cargaCuadricula(){
@@ -16,8 +28,16 @@
           fila = tabla.insertRow(-1);
           for(j=0 ; j<67 ;j++){
              celda = fila.insertCell(-1);
+              celda.addEventListener('click', function () { cambiarFondo(); });
           }
         }
+      }
+      function  cambiarFondo(){
+        if(this.className == "Negro){
+           this.className ="Blanco"
+           }else{
+            this.className ="Negro"
+          }
       }
     </script>
   </head>
