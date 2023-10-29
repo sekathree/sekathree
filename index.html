@@ -1,5 +1,6 @@
 <html>
   <head>
+    <script src="jquery-3.7.1.min.js"></script>
     <style>
       
       td {
@@ -14,11 +15,25 @@
           background-color:black;
         }
         
-
-      
+        .highlight {
+            background-color:lightgray;
+        }
+              
       
     </style>
     <script>
+
+      $(document).ready(function() {
+    $('td').on('mouseover', function() {
+        $(this).closest('tr').addClass('highlight');
+        $(this).closest('table').find('.myCell:nth-child(' + ($(this).index() + 1) + ')').addClass('highlight');
+    });
+    $('td').on('mouseout', function() {
+        $(this).closest('tr').removeClass('highlight');
+        $(this).closest('table').find('.myCell:nth-child(' + ($(this).index() + 1) + ')').removeClass('highlight');
+    });
+});
+      
       function cargaCuadricula(){
         let tabla;
         let fila;
