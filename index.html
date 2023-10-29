@@ -53,11 +53,11 @@
 
             $('td').on('mouseover', function() {
         $(this).closest('tr').addClass('highlight');
-        $(this).closest('table').find('.myCell:nth-child(' + ($(this).index() + 1) + ')').addClass('highlight');
+        $(this).closest('table').find('td:nth-child(' + ($(this).index() + 1) + ')').addClass('highlight');
     });
     $('td').on('mouseout', function() {
         $(this).closest('tr').removeClass('highlight');
-        $(this).closest('table').find('.myCell:nth-child(' + ($(this).index() + 1) + ')').removeClass('highlight');
+        $(this).closest('table').find('td:nth-child(' + ($(this).index() + 1) + ')').removeClass('highlight');
     });
       }
       function  cambiarFondo(evento){
